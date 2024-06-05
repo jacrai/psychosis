@@ -2,7 +2,7 @@ local Decimals = 4
 local Clock = os.clock()
 local ValueText = "なpsychosis.hub"
 
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/drillygzzly/Roblox-UI-Libs/main/1%20Tokyo%20Lib%20(FIXED)/Tokyo%20Lib%20Source.lua"))({
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/jacrai/tokyolibjacrai/main/fix"))({
     cheatname = "なpsychosis.hub", -- watermark text
     gamename = "Universal", -- watermark text
 })
@@ -10,7 +10,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/drill
 library:init()
 
 local Window1  = library.NewWindow({
-    title = "psychosis.hub | free | 1.3.5 | universal", -- Mainwindow Text
+    title = "psychosis.hub | free | 1.3.6 | universal", -- Mainwindow Text
     size = UDim2.new(0, 510, 0.6, 6
 )})
 
@@ -156,19 +156,6 @@ local Section3 = Tab1:AddSection("Abuse", 3)
 
 Section3:AddButton({
     enabled = true,
-    text = "inf money RRP [local]",
-    tooltip = "you are the richest!",
-    confirm = false,
-    risky = false,
-    callback = function()
-        local value = game.Players.LocalPlayer.leaderstats.RUB
-
-game:GetService('ReplicatedStorage')['ACS_Engine'].Eventos.Recarregar:FireServer(100000000000000,{ACS_Modulo={Variaveis={StoredAmmo = value}}})
-    end
-})
-
-Section3:AddButton({
-    enabled = true,
     text = "god mode [local]",
     tooltip = "sounds cool",
     confirm = false,
@@ -290,3 +277,41 @@ Section6:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ttwizz/Open-Aimbot/master/source.lua", true))()
     end
     })
+
+local Tab2 = Window1:AddTab("Games")
+
+local Section7 = Tab2:AddSection("Россия РП", 1)
+
+Section7:AddButton({
+    enabled = true,
+    text = "infmoney rrp [local]",
+    tooltip = "vlow's russia rp fix",
+    confirm = false,
+    risky = false,
+    callback = function()
+        local value = game.Players.LocalPlayer.leaderstats.RUB
+
+game:GetService('ReplicatedStorage')['ACS_Engine'].Eventos.ZV:FireServer(100000000000000000,{ACS_Modulo={Variaveis={StoredAmmo = value}}})
+    end
+})
+
+local Section8 = Tab2:AddSection("Selidovo", 2)
+
+Section8:AddButton({
+    enabled = true,
+    text = "large cube [crash]",
+    tooltip = "fix large cube",
+    confirm = false,
+    risky = false,
+    callback = function()
+        local cFrame = CFrame.new(0,0,0)
+
+local Size = {
+  X = 1000000,
+  Y = 1000000,
+  Z = 1000000
+}
+
+game:GetService('ReplicatedStorage')['GunSys'].Evt.Breach:FireServer(3,{Fortified={},Destroyable=workspace},CFrame.new(),CFrame.new(),{CFrame=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*cFrame,Size=Size})
+    end
+})
