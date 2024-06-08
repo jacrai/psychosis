@@ -1,3 +1,4 @@
+
 local Decimals = 4
 local Clock = os.clock()
 local ValueText = "なpsychosis.hub"
@@ -405,5 +406,23 @@ local Size = {
 }
 
 game:GetService('ReplicatedStorage')['GunSys'].Evt.Breach:FireServer(3,{Fortified={},Destroyable=workspace},CFrame.new(),CFrame.new(),{CFrame=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*cFrame,Size=Size})
+    end
+})
+
+local Section9 = Tab2:AddSection("Bobruisk RP", 1)
+
+Section9:AddButton({
+    enabled = true,
+    text = "crash server [crash]",
+    tooltip = "Bobruisk RP lag server",
+    confirm = false,
+    risky = false,
+    callback = function()
+        while task.wait() do
+
+  for _, player in next, game.Players:GetPlayers() do
+     game:GetService("ReplicatedStorage")["ACS_Engine"].Events.Suppression:FireServer(player, 666, 666, 666)
+  end
+end
     end
 })
