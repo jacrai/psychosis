@@ -11,7 +11,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/jacra
 library:init()
 
 local Window1  = library.NewWindow({
-    title = "psychosis.hub | free | 1.3.8 | universal",
+    title = "psychosis.hub | free | 1.40 | universal",
     size = UDim2.new(0, 510, 0.6, 6
 )})
 
@@ -304,7 +304,33 @@ Section5:AddButton({
     end
 })
 
+Section5:AddButton({
+    enabled = true,
+    text = "leave music [crash]",
+    tooltip = "e",
+    confirm = false,
+    risky = false,
+    callback = function()
+        sound = true 
+        local ID = "rbxassetid://8892173567" 
+        local Name = "xd" 
+        local Volume = 1000
+        local Pitch = 1
 
+        for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+            if v:IsA("RemoteEvent") and v.Name == "AC6_FE_Sounds" then
+                if sound == true then
+                    v:FireServer("newSound", Name, workspace, ID, Pitch, Volume, true)
+                    v:FireServer("playSound", Name)
+                end 
+
+                if sound == false then
+                    v:FireServer("stopSound", Name)
+                end
+            end
+        end
+    end
+})
 
 Section5:AddButton({
     enabled = true,
@@ -336,21 +362,10 @@ Section5:AddButton({
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 Section5:AddButton({
     enabled = true,
-    text = "ttwizz hub [crash]",
-    tooltip = "you want some music?",
+    text = "ttwizz hub [hub]",
+    tooltip = "skid skid",
     confirm = false,
     risky = false,
     callback = function()
@@ -373,9 +388,48 @@ Section6:AddButton({
 
 local Tab2 = Window1:AddTab("Games")
 
-local Section7 = Tab2:AddSection("Россия РП", 1)
+local Section0 = Tab2:AddSection("Россия РП", 1)
 
-Section7:AddButton({
+Section0:AddButton({
+    enabled = true,
+    text = "leave music [crash]",
+    tooltip = "e",
+    confirm = false,
+    risky = false,
+    callback = function()
+        sound = true 
+        local ID = "rbxassetid://8892173567" 
+        local Name = "xd" 
+        local Volume = 1000
+        local Pitch = 1
+
+        for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+            if v:IsA("RemoteEvent") and v.Name == "AC6_S" then
+                if sound == true then
+                    v:FireServer("newSound", Name, workspace, ID, Pitch, Volume, true)
+                    v:FireServer("playSound", Name)
+                end 
+
+                if sound == false then
+                    v:FireServer("stopSound", Name)
+                end
+            end
+        end
+    end
+})
+
+Section0:AddButton({
+    enabled = true,
+    text = "россия рп hub [hub]",
+    tooltip = "ban swastika delete admin etc",
+    confirm = false,
+    risky = false,
+    callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/jacrai/vlowhubfix/main/vlowhub2", true))()
+    end
+})
+
+Section0:AddButton({
     enabled = true,
     text = "infmoney rrp [local]",
     tooltip = "vlow's russia rp fix",
@@ -387,6 +441,9 @@ Section7:AddButton({
 game:GetService('ReplicatedStorage')['ACS_Engine'].Eventos.ZV:FireServer(100000000000000000,{ACS_Modulo={Variaveis={StoredAmmo = value}}})
     end
 })
+
+
+
 
 local Section8 = Tab2:AddSection("Selidovo", 2)
 
