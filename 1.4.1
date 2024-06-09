@@ -1,17 +1,17 @@
 
 local Decimals = 4
 local Clock = os.clock()
-local ValueText = "なpsychosis.hub"
+local ValueText = "psychosis.hub"
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/jacrai/tokyolibjacrai/main/fix"))({
-    cheatname = "なpsychosis.hub", 
+    cheatname = "psychosis.hub", 
     gamename = "Universal", 
 })
 
 library:init()
 
 local Window1  = library.NewWindow({
-    title = "psychosis.hub | free | 1.40 | universal",
+    title = "psychosis.hub | free | 1.4.1 | universal",
     size = UDim2.new(0, 510, 0.6, 6
 )})
 
@@ -25,8 +25,8 @@ local Section1 = Tab1:AddSection("Building", 1)
 
 Section1:AddButton({
     enabled = true,
-    text = "small cube [5x5]",
-    tooltip = "spawn a small cube",
+    text = "small cube",
+    tooltip = "5x5",
     confirm = false,
     risky = false,
     callback = function()
@@ -45,8 +45,8 @@ game:GetService('ReplicatedStorage')['ACS_Engine'].Eventos.Breach:FireServer(3,{
 
 Section1:AddButton({
     enabled = true,
-    text = "large cube [100+]",
-    tooltip = "spawn large cube",
+    text = "large cube",
+    tooltip = "100x+100x",
     confirm = false,
     risky = false,
     callback = function()
@@ -67,7 +67,7 @@ local Section2 = Tab1:AddSection("Crash", 2)
 
 Section2:AddButton({
     enabled = true,
-    text = "explode everything [crash]",
+    text = "explode everything",
     tooltip = "sounds like.. donbass?",
     confirm = false,
     risky = false,
@@ -93,7 +93,7 @@ end
 
 Section2:AddButton({
     enabled = true,
-    text = "whizz server [crash]",
+    text = "whizz server",
     tooltip = "is that flies?",
     confirm = false,
     risky = false,
@@ -109,7 +109,7 @@ end
 
 Section2:AddButton({
     enabled = true,
-    text = "delete server [crash]",
+    text = "delete server",
     tooltip = "where is map?",
     confirm = false,
     risky = false,
@@ -125,7 +125,7 @@ Section2:AddButton({
 
 Section2:AddButton({
     enabled = true,
-    text = "remove limbs [crash]",
+    text = "remove limbs",
     tooltip = "what is wrong with my router?",
     confirm = false,
     risky = false,
@@ -144,7 +144,7 @@ Section2:AddButton({
 
 Section2:AddButton({
     enabled = true,
-    text = "lag server [crash]",
+    text = "lag server",
     tooltip = "what is wrong with my router?",
     confirm = false,
     risky = false,
@@ -153,11 +153,81 @@ Section2:AddButton({
     end
 })
 
+local Section22 = Tab1:AddSection("Crash 2", 2)
+
+Section22:AddButton({
+    enabled = true,
+    text = "delete lighting",
+    tooltip = "deletes Lighting",
+    confirm = false,
+    risky = false,
+    callback = function()
+        for i,v in pairs(game:GetService("Lighting"):GetDescendants()) do 
+local userdata_1 = v --[[ Parent is "nil" or object is destroyed ]];
+local Target = game:GetService("ReplicatedStorage").DeleteCar;
+Target:FireServer(userdata_1);
+end
+    end
+})
+
+Section22:AddButton({
+    enabled = true,
+    text = "delete teams",
+    tooltip = "deletes Teams",
+    confirm = false,
+    risky = false,
+    callback = function()
+        for i,v in pairs(game:GetService("Teams"):GetDescendants()) do 
+local userdata_1 = v --[[ Parent is "nil" or object is destroyed ]];
+local Target = game:GetService("ReplicatedStorage").DeleteCar;
+Target:FireServer(userdata_1);
+end
+    end
+})
+
+Section22:AddButton({
+    enabled = true,
+    text = "delete gui",
+    tooltip = "deletes StarterGui",
+    confirm = false,
+    risky = false,
+    callback = function()
+        for i,v in pairs(game:GetService("StarterGui"):GetDescendants()) do 
+local userdata_1 = v --[[ Parent is "nil" or object is destroyed ]];
+local Target = game:GetService("ReplicatedStorage").DeleteCar;
+Target:FireServer(userdata_1);
+end
+    end
+})
+
+Section22:AddButton({
+    enabled = true,
+    text = "delete replicatedstorage",
+    tooltip = "deletes ReplicatedStorage",
+    confirm = false,
+    risky = false,
+    callback = function()
+        for i,v in pairs(game:GetService("ReplicatedStorage"):GetDescendants()) do 
+local userdata_1 = v --[[ Parent is "nil" or object is destroyed ]];
+local Target = game:GetService("ReplicatedStorage").DeleteCar;
+Target:FireServer(userdata_1);
+end
+    end
+})
+
+
+
+
+
+
+
+
+
 local Section3 = Tab1:AddSection("Abuse", 3)
 
 Section3:AddButton({
     enabled = true,
-    text = "god mode [local]",
+    text = "god mode",
     tooltip = "sounds cool",
     confirm = false,
     risky = false,
@@ -170,7 +240,7 @@ local Section4 = Tab1:AddSection("Other", 1)
 
 Section4:AddButton({
     enabled = true,
-    text = "inf yield [local]",
+    text = "inf yield",
     tooltip = "become admin, you know",
     confirm = false,
     risky = false,
@@ -181,7 +251,7 @@ Section4:AddButton({
 
 Section4:AddButton({
     enabled = true,
-    text = "tools [local]",
+    text = "tools",
     tooltip = "blink+bkb+requiem+blink+requiem+shadowraze+shadowraze+shadowraze",
     confirm = false,
     risky = false,
@@ -190,33 +260,11 @@ Section4:AddButton({
     end
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 local Section5 = Tab1:AddSection("Fun", 1)
 
 Section5:AddButton({
     enabled = true,
-    text = "harked [fun]",
+    text = "harked",
     tooltip = "powerfull tool",
     confirm = false,
     risky = false,
@@ -227,7 +275,7 @@ Section5:AddButton({
 
 Section5:AddButton({
     enabled = true,
-    text = "swastika [fun]",
+    text = "swastika",
     tooltip = "osudil odobril",
     confirm = false,
     risky = false,
@@ -278,7 +326,7 @@ game:GetService('ReplicatedStorage')['ACS_Engine'].Eventos.Breach:FireServer(3,{
 
 Section5:AddButton({
     enabled = true,
-    text = "ukraine music [crash]",
+    text = "ukraine music",
     tooltip = "slava ukraini",
     confirm = false,
     risky = false,
@@ -304,9 +352,10 @@ Section5:AddButton({
     end
 })
 
+
 Section5:AddButton({
     enabled = true,
-    text = "leave music [crash]",
+    text = "leave music",
     tooltip = "e",
     confirm = false,
     risky = false,
@@ -334,7 +383,7 @@ Section5:AddButton({
 
 Section5:AddButton({
     enabled = true,
-    text = "shit sounds [crash]",
+    text = "shit sounds",
     tooltip = "nothing to say, shit sounds",
     confirm = false,
     risky = false,
@@ -360,11 +409,65 @@ Section5:AddButton({
     end
 })
 
+Section5:AddButton({
+    enabled = true,
+    text = "loud train",
+    tooltip = "very loud train horn",
+    confirm = false,
+    risky = false,
+    callback = function()
+        sound = true 
+        local ID = "rbxassetid://3900067524" 
+        local Name = "xd" 
+        local Volume = 1000
+        local Pitch = 1
 
+        for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+            if v:IsA("RemoteEvent") and v.Name == "AC6_FE_Sounds" then
+                if sound == true then
+                    v:FireServer("newSound", Name, workspace, ID, Pitch, Volume, true)
+                    v:FireServer("playSound", Name)
+                end 
+
+                if sound == false then
+                    v:FireServer("stopSound", Name)
+                end
+            end
+        end
+    end
+})
 
 Section5:AddButton({
     enabled = true,
-    text = "ttwizz hub [hub]",
+    text = "microwave sounds",
+    tooltip = "microwave sounds",
+    confirm = false,
+    risky = false,
+    callback = function()
+        sound = true 
+        local ID = "rbxassetid://5785516639" 
+        local Name = "xd" 
+        local Volume = 1000
+        local Pitch = 1
+
+        for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+            if v:IsA("RemoteEvent") and v.Name == "AC6_FE_Sounds" then
+                if sound == true then
+                    v:FireServer("newSound", Name, workspace, ID, Pitch, Volume, true)
+                    v:FireServer("playSound", Name)
+                end 
+
+                if sound == false then
+                    v:FireServer("stopSound", Name)
+                end
+            end
+        end
+    end
+})
+
+Section5:AddButton({
+    enabled = true,
+    text = "ttwizz hub",
     tooltip = "skid skid",
     confirm = false,
     risky = false,
@@ -377,7 +480,7 @@ local Section6 = Tab1:AddSection("Legit", 1)
 
 Section6:AddButton({
     enabled = true,
-    text = "aimbot&esp [legit]",
+    text = "open aimbot",
     tooltip = "cool thing if you legit cheat",
     confirm = false,
     risky = false,
@@ -392,7 +495,7 @@ local Section0 = Tab2:AddSection("Россия РП", 1)
 
 Section0:AddButton({
     enabled = true,
-    text = "leave music [crash]",
+    text = "leave music",
     tooltip = "e",
     confirm = false,
     risky = false,
@@ -420,7 +523,7 @@ Section0:AddButton({
 
 Section0:AddButton({
     enabled = true,
-    text = "россия рп hub [hub]",
+    text = "россия рп hub",
     tooltip = "ban swastika delete admin etc",
     confirm = false,
     risky = false,
@@ -431,7 +534,7 @@ Section0:AddButton({
 
 Section0:AddButton({
     enabled = true,
-    text = "infmoney rrp [local]",
+    text = "infmoney rrp",
     tooltip = "vlow's russia rp fix",
     confirm = false,
     risky = false,
@@ -447,7 +550,7 @@ local Section9 = Tab2:AddSection("Bobruisk RP", 2)
 
 Section9:AddButton({
     enabled = true,
-    text = "crash server [crash]",
+    text = "crash server",
     tooltip = "Bobruisk RP lag server",
     confirm = false,
     risky = false,
